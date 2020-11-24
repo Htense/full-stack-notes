@@ -1,4 +1,4 @@
-# Notes from Hortense - Using Git in a Team!
+# Notes from Hortense - Git Protocol in a Team!
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
 
@@ -45,16 +45,12 @@ code .
 ```
 ## 7. Vscode
 
-* Files marked C need 
-
-A red triangle indicates where lines have been deleted
-A green bar indicates new added lines
-A blue bar indicates modified lines
-* 
-* 
+* Files marked C = Conflict
+* Files marked M = Modified
+* <<<<< Head  = This is you! Current changes, you are HEAD
+* <<<<<< Incoming change = pulled in from the master
 
 ## 8. Any conflicts or changes need to be saved, added, & committed again
-
 
 ```
 git add .
@@ -64,7 +60,7 @@ git push origin myBranch
 ## 9. Github - create pull request
 
 * Create pull request from mybranch to master (on github)
-* Tell the git keeper, they will merge the pull request and there should be 0 conflicts as you have allready resolved these in your branch.
+* Tell the git keeper, they will merge the pull request and there should be 0 conflicts as you have already resolved these in your branch.
 
 Create a new branch with a new name
 ```
@@ -90,17 +86,7 @@ npm run knex seed:run
 
 # Dev academy Readme
 
-## Getting Started
-
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-### From the command line
-
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
 npm run dev # to start the dev server
 ```
 
