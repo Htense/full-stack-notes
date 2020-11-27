@@ -1,35 +1,29 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
 
-export class App extends React.Component {
-  state = {
-    fruits: []
+
+import Header from './Header.jsx'
+import Nav from './Nav.jsx'
+import Home from './Home.jsx'
+import Form from './Form.jsx'
+import Polaroid from './Polaroid.jsx'
+import Profile from './Profile.jsx'
+import Search from './Search.jsx'
+
+class App extends React.Component {
+    render () {
+      return (
+        <>
+          <Header/>
+          <Nav/>
+          <Home/>
+          <Form/>
+          <Polaroid/>
+          <Profile/>
+          <Search/>
+        </>
+      )
+    }
   }
 
-  componentDidMount () {
-    this.props.dispatch(fetchFruits())
-  }
-
-  render () {
-    return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
-}
-
-function mapStateToProps (globalState) {
-  return {
-    fruits: globalState.fruits
-  }
-}
-
-export default connect(mapStateToProps)(App)
+export default App
